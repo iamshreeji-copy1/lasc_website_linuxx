@@ -2665,3 +2665,25 @@ section {
 .footer .credits a {
   color: #fff;
 }
+
+
+/* Ensure the container uses flexbox for alignment */
+.clients-slider .swiper-wrapper {
+  display: flex;
+  justify-content: center; /* Aligns items horizontally to the center */
+  align-items: center; /* Aligns items vertically to the center */
+  height: 100%; /* Ensures the full height of the container is used */
+}
+
+/* Center the individual swiper slides */
+.clients-slider .swiper-slide {
+  display: flex;
+  justify-content: center; /* Centers the image within the slide */
+  align-items: center; /* Centers the image within the slide */
+}
+
+/* Optional: Add some padding to the images if needed */
+.clients-slider .swiper-slide img {
+  max-width: 100%; /* Ensures images do not exceed their container */
+  padding: 10px; /* Adds padding around the images */
+}
