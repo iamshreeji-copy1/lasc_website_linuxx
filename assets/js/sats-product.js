@@ -37,12 +37,13 @@
     var end = parseFloat(el.getAttribute('data-count')), dec = parseInt(el.getAttribute('data-dec') || '0', 10);
     if (isNaN(end) || reduced()) { el.textContent = fmt(end, dec); return; }
     var t0 = null, dur = 1200;
+    if (!run.announced) { run.announced = true; document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'count', dur: dur } })); }   // rhythm starts with the count
     (function step(t) {
       if (t0 === null) t0 = t;
       var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
       el.textContent = fmt(end * e, dec);
       if (p < 1) requestAnimationFrame(step);
-      else { el.textContent = fmt(end, dec); if (!run.announced) { run.announced = true; document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'complete' } })); } }
+      else el.textContent = fmt(end, dec);
     })(performance.now());
   }
   if (nums.length) {

@@ -103,8 +103,8 @@
       sw('cursor', 'bi-cursor-fill', 'Big cursor', 'Larger mouse pointer') +
       sw('guide', 'bi-eye', 'Reading guide', 'A focus band follows your mouse') +
       sw('motion', 'bi-pause-circle', 'Pause animations', 'Stops moving effects and auto-play') +
-      sw('sound', 'bi-music-note-beamed', 'Sound effects', 'Soft sounds when you touch or the animation reaches a point') +
-      sw('haptics', 'bi-phone-vibrate', 'Vibration', 'Short buzzes on supported phones (Android)') +
+      sw('sound', 'bi-music-note-beamed', 'Sound effects', 'Soft sounds as you touch and as animations reach a point') +
+      sw('haptics', 'bi-phone-vibrate', 'Vibration', 'Rhythmic haptics in time with the sounds (Android phones)') +
       (synth ? sw('speak', 'bi-volume-up-fill', 'Read aloud', 'Reads the page, or the text you select') : '') +
       '</div><footer><button type="button" class="a11y-reset"><i class="bi bi-arrow-counterclockwise"></i> Reset all</button>' +
       '<span>Saved on this device. Press <kbd>Esc</kbd> to close.</span></footer>';
