@@ -214,7 +214,7 @@ def footer(on_index):
           </ul>
         </div>
       </div>
-      {'' if on_index else '<div class="made-with">Crafted with <span class="heart" aria-hidden="true">❤</span> love in Gandhinagar, India<small>SATs – Instruments made by researchers, for researchers.</small></div>'}
+      {'' if on_index else '<div class="made-with">Crafted with <span class="heart" aria-hidden="true">❤</span> in Gandhinagar, India<small>SATs – Instruments made by researchers, for researchers.</small></div>'}
       <div class="footer-bottom">
         <div class="copyright">&copy; {YEAR} <strong><span>SATs</span></strong>. All Rights Reserved</div>
         <div class="credits">Designed by <a href="{S['credit_url']}" target="_blank" rel="noopener noreferrer"><b>Team SATs</b> with ❤️</a></div>
@@ -1046,7 +1046,7 @@ def build_index():
   <!-- ======= Crafted with love ======= -->
   <section class="crafted" aria-label="About this website">
     <div class="container text-center" data-aos="zoom-in">
-      <p class="crafted-line">Crafted with <span class="heart" aria-hidden="true">❤</span> love in Gandhinagar, India</p>
+      <p class="crafted-line">Crafted with <span class="heart" aria-hidden="true">❤</span> in Gandhinagar, India</p>
       <p class="crafted-sub">SATs – Instruments made by researchers, for researchers.</p>
     </div>
   </section>
