@@ -143,7 +143,6 @@ def header(on_index, active=None):
     items = [('Home', home, 'home'), ('About', base + '#about', 'about'), ('Services', base + '#services', 'services'),
              ('Products', base + '#portfolio', 'products'), ('Pricing', base + '#pricing', 'pricing'), ('FAQ', base + '#faq', 'faq')]
     lis = ''.join(f'<li><a href="{h}"{" class=\"active\" aria-current=\"page\"" if active == k else ""}>{n}</a></li>' for n, h, k in items)
-    lis += f'<li><a class="scada-link" href="{S["scada_url"]}" target="_blank" rel="noopener noreferrer" aria-label="SCADA Login (opens in a new tab)"><i class="bi bi-lock-fill" aria-hidden="true"></i> SCADA Login</a></li>'
     lis += f'<li><a class="getstarted" href="{base}#contact">Contact</a></li>'
     soc = ''.join(f'<a href="{u}" class="{k}" target="_blank" rel="noopener noreferrer" aria-label="{esc(n)}"><i class="bi bi-{k}"></i></a>' for k, n, u in S['social'])
     return f"""<body>
@@ -185,7 +184,6 @@ def footer(on_index):
     quick = [('Home', '#hero' if on_index else 'index.html'), ('About us', base + '#about'), ('Services', base + '#services'),
              ('Products', base + '#portfolio'), ('Pricing', base + '#pricing'), ('FAQ', base + '#faq'), ('Contact', base + '#contact')]
     quick_li = ''.join(f'<li><a href="{h}">{n}</a></li>' for n, h in quick)
-    quick_li += f'<li><a href="{S["scada_url"]}" target="_blank" rel="noopener noreferrer">SCADA Login <span class="visually-hidden">(opens in a new tab)</span></a></li>'
     prods = [p for p in PRODUCTS if not p.get('canonical_of')]
     prod_li = ''.join(f'<li><a href="{href(p["file"])}">{esc(p["name"])}</a></li>' for p in prods)
     addr = '<br>'.join(S['address_lines'])
@@ -995,47 +993,6 @@ def build_index():
         <ul class="portfolio-flters" aria-label="Filter products">{flt}</ul>
         <p class="pd-empty" id="product-empty" hidden>No product matches your search. <button type="button" id="product-reset" class="btn-link-sats">Show all products</button></p>
         <div class="row gy-4 portfolio-container">{cards}</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ======= SATs SCADA ======= -->
-  <section id="scada" class="scada">
-    <div class="container" data-aos="fade-up">
-      <div class="row gy-5 align-items-center">
-        <div class="col-lg-6 order-2 order-lg-1">
-          <span class="scada-eyebrow"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i> SATs SCADA</span>
-          <h2>Solar SCADA &amp; analytics, built by SATs</h2>
-          <p class="scada-lead">Monitor a solar plant live, understand its performance and get alerted the moment something changes – all from one secure web console.</p>
-          <ul class="scada-list">
-            <li><i class="bi bi-activity" aria-hidden="true"></i><div><strong>Real-time telemetry</strong><span>Inverters, energy meters and weather sensors on one live dashboard.</span></div></li>
-            <li><i class="bi bi-graph-up-arrow" aria-hidden="true"></i><div><strong>Analytics &amp; forecasting</strong><span>An AI/ML dashboard with generation forecasts and financial insight.</span></div></li>
-            <li><i class="bi bi-bell" aria-hidden="true"></i><div><strong>Alarms &amp; audit trail</strong><span>Instant alerts, a full alarm history and a security audit log.</span></div></li>
-            <li><i class="bi bi-shield-lock" aria-hidden="true"></i><div><strong>Reports &amp; secure access</strong><span>Export data, charts or both, with separate roles for admins, owners and viewers.</span></div></li>
-          </ul>
-          <div class="scada-cta">
-            <a class="btn-sats btn-sats-primary" href="{S['scada_url']}" target="_blank" rel="noopener noreferrer"><i class="bi bi-lock-fill" aria-hidden="true"></i> SCADA Login <span class="visually-hidden">(opens in a new tab)</span></a>
-            <a class="btn-sats btn-sats-outline" href="#contact"><i class="bi bi-chat-dots" aria-hidden="true"></i> Ask about SCADA</a>
-          </div>
-          <p class="scada-note"><i class="bi bi-info-circle" aria-hidden="true"></i> Login is for authorised plant operators, owners and partners.</p>
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2">
-          <figure class="scada-art" aria-label="Illustration of a live SCADA dashboard">
-            <svg viewBox="0 0 560 380" role="img" aria-hidden="true" focusable="false">
-              <rect class="sa-card" x="8" y="8" width="544" height="364" rx="22"/>
-              <circle class="sa-dot r" cx="38" cy="38" r="6"/><circle class="sa-dot y" cx="58" cy="38" r="6"/><circle class="sa-dot g" cx="78" cy="38" r="6"/>
-              <rect class="sa-pill" x="420" y="26" width="104" height="24" rx="12"/><circle class="sa-live" cx="438" cy="38" r="5"/>
-              <text class="sa-text" x="452" y="43" font-size="12" font-weight="700">LIVE</text>
-              <g class="sa-grid"><line x1="40" y1="120" x2="520" y2="120"/><line x1="40" y1="170" x2="520" y2="170"/><line x1="40" y1="220" x2="520" y2="220"/><line x1="40" y1="270" x2="520" y2="270"/></g>
-              <path class="sa-area" d="M40 270 C100 260 120 180 170 190 S250 120 300 150 S390 230 440 130 S500 110 520 120 L520 270 L40 270 Z"/>
-              <path class="sa-line" d="M40 270 C100 260 120 180 170 190 S250 120 300 150 S390 230 440 130 S500 110 520 120"/>
-              <path class="sa-line2" d="M40 250 C110 240 140 225 190 215 S280 200 330 195 S430 185 520 175"/>
-              <g class="sa-bars"><rect x="60" y="300" width="22" height="50" rx="4"/><rect x="100" y="312" width="22" height="38" rx="4"/><rect x="140" y="296" width="22" height="54" rx="4"/><rect x="180" y="306" width="22" height="44" rx="4"/><rect x="220" y="292" width="22" height="58" rx="4"/></g>
-              <g class="sa-gauges"><circle class="g1" cx="340" cy="325" r="26"/><circle class="g2" cx="410" cy="325" r="26"/><circle class="g3" cx="480" cy="325" r="26"/></g>
-            </svg>
-            <figcaption>Illustration – no live data shown</figcaption>
-          </figure>
-        </div>
       </div>
     </div>
   </section>
