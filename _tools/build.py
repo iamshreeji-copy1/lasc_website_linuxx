@@ -867,8 +867,7 @@ def build_index():
       <div class="row gy-5 align-items-center">
         <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start hero-copy">
           <span class="hero-logo"><img src="assets/img/brand/sats-logo-white.png" width="734" height="527" alt="SATs – Semiconductor Analysis and Testing Solutions"></span>
-          <h1>Welcome to <span>SATs.</span></h1>
-          <p class="hero-sub">Semiconductor Analysis and Testing Solutions</p>
+          <h1 class="visually-hidden">SATs – Semiconductor Analysis and Testing Solutions</h1>
           <p class="hero-typed" aria-live="off"><span class="label">We build </span><span data-typed data-words='["Probe Stations","Cryogenic Systems","PEC Setups","Hydrothermal Autoclaves","Potentiostats","Sample Holders","Lab Automation"]'>Probe Stations</span><span class="caret" aria-hidden="true"></span></p>
           <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start align-items-center">
             <a href="{S['brochure']}" target="_blank" rel="noopener noreferrer" class="btn-get-started"><i class="bi bi-download"></i> Get brochure</a>

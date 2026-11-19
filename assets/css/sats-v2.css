@@ -638,3 +638,50 @@ html[data-contrast="high"] .a11y-guide { border-top: 3px solid #ffe600 !importan
 .pd-noimg span { margin: 0; font-size: 18px; font-weight: 700; color: var(--ink); text-align: center; }
 [data-theme="dark"] .pd-noimg { background: linear-gradient(135deg, rgba(79, 216, 196, .12), var(--surface)); }
 [data-theme="dark"] .pd-noimg { color: var(--link); }
+
+/* ============================================================ mobile / tablet menu (< 1280px) */
+@media (max-width: 1279px) {
+  /* a header with view-transition-name / backdrop-filter becomes the containing block of fixed children and clips the menu to 80px -> disable here */
+  .header { view-transition-name: none; }
+  .header.sticked { -webkit-backdrop-filter: none; backdrop-filter: none; background-color: var(--color-primary); }
+  [data-theme="dark"] .header.sticked { background-color: #03312b; }
+
+  .navbar { right: 0; width: min(88vw, 380px); max-width: none; transform: translateX(105%); visibility: hidden;
+    transition: transform .42s var(--ease), visibility 0s linear .42s; box-shadow: -24px 0 60px rgba(0, 0, 0, .45); }
+  .mobile-nav-active .navbar { transform: none; visibility: visible; transition: transform .42s var(--ease), visibility 0s; }
+  .mobile-nav-active .navbar:before { background: rgba(2, 24, 21, .62); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); animation: fade-in .3s ease both; right: 0; left: -100vw; }
+
+  .navbar ul { display: flex; flex-direction: column; gap: 6px; padding: 22px 18px 28px; background: linear-gradient(165deg, #003e37 0%, #006255 100%); overflow-y: auto; overscroll-behavior: contain; }
+  [data-theme="dark"] .navbar ul { background: linear-gradient(165deg, #021a17 0%, #043c34 100%); }
+  .navbar ul::before { content: "SATS"; display: block; flex: none; margin: 0 4px 12px; padding: 4px 0 18px; border-bottom: 1px solid rgba(255, 255, 255, .2);
+    font-family: var(--font-primary); font-size: 28px; font-weight: 800; letter-spacing: .09em; color: #fff; }
+
+  .navbar li { flex: none; }
+  .navbar a, .navbar a:focus { justify-content: flex-start; gap: 12px; padding: 15px 16px; border-radius: 12px; font-size: 18px; font-weight: 600; color: #fff; border-left: 4px solid transparent; }
+  .navbar a:hover { background: rgba(255, 255, 255, .1); }
+  .navbar a.active { background: rgba(255, 255, 255, .14); border-left-color: var(--color-accent); }
+  .navbar .getstarted, .navbar .getstarted:focus { justify-content: center; margin: 14px 0 0; padding: 15px 20px; border-radius: 999px; border-left-width: 0;
+    background: #fff; color: var(--color-primary) !important; font-weight: 800; box-shadow: 0 10px 24px rgba(0, 0, 0, .28); }
+  .navbar .getstarted:hover { background: var(--color-accent); color: #fff !important; }
+
+  .mobile-nav-active .navbar li { animation: nav-in .5s var(--ease) both; }
+  .mobile-nav-active .navbar li:nth-child(1) { animation-delay: .10s; } .mobile-nav-active .navbar li:nth-child(2) { animation-delay: .16s; }
+  .mobile-nav-active .navbar li:nth-child(3) { animation-delay: .22s; } .mobile-nav-active .navbar li:nth-child(4) { animation-delay: .28s; }
+  .mobile-nav-active .navbar li:nth-child(5) { animation-delay: .34s; } .mobile-nav-active .navbar li:nth-child(6) { animation-delay: .40s; }
+  .mobile-nav-active .navbar li:nth-child(7) { animation-delay: .46s; } .mobile-nav-active .navbar li:nth-child(8) { animation-delay: .52s; }
+
+  .mobile-nav-hide { display: grid; place-items: center; width: 44px; height: 44px; top: 14px; right: 16px; border-radius: 50%; font-size: 24px; line-height: 1; color: #fff;
+    background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .35); z-index: 10000; }
+  .mobile-nav-hide.d-none { display: none !important; }
+  .mobile-nav-show { color: #fff; }
+  .mobile-nav-active, html:has(body.mobile-nav-active) { overflow: hidden; }
+}
+@keyframes nav-in { from { opacity: 0; transform: translateX(26px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+/* hero: the logo is the one visible brand statement (SATS + full name), so the logo is larger and the repeated heading is screen-reader only */
+.hero-logo { width: clamp(190px, 24vw, 320px); margin-bottom: 26px; border-radius: 8px; }
+.hero .hero-typed { margin: 0 0 32px; font-size: clamp(18px, 2.2vw, 24px); }
+/* mobile menu: no list bullets */
+.navbar ul, .navbar li { list-style: none; }
+.navbar li::marker { content: ""; }
