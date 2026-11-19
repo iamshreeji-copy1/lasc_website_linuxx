@@ -41,7 +41,8 @@
       if (t0 === null) t0 = t;
       var p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
       el.textContent = fmt(end * e, dec);
-      if (p < 1) requestAnimationFrame(step); else el.textContent = fmt(end, dec);
+      if (p < 1) requestAnimationFrame(step);
+      else { el.textContent = fmt(end, dec); if (!run.announced) { run.announced = true; document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'complete' } })); } }
     })(performance.now());
   }
   if (nums.length) {
@@ -89,8 +90,15 @@
       var h = Math.floor(m / 60), r = Math.round(m - h * 60);
       return '≈ ' + h + ' h' + (r ? ' ' + r + ' min' : '');
     }
-    function update() {
+    var lastBucket = null, wasWarn = false;
+    function update(fromUser) {
       var v = parseInt(input.value, 10);
+      if (fromUser === true) {      // sound/haptics only when the visitor moves the slider (not during the intro sweep)
+        var bucket = Math.floor(v / 25), warn = v > cfg.std_max;
+        if (lastBucket !== null && bucket !== lastBucket) document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'step', t: (v - cfg.min) / (cfg.max - cfg.min) } }));
+        if (warn && !wasWarn) document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'warn' } }));
+        lastBucket = bucket; wasWarn = warn;
+      } else { lastBucket = Math.floor(v / 25); wasWarn = v > cfg.std_max; }
       val.textContent = String(v).replace('-', '−');
       input.setAttribute('aria-valuetext', val.textContent + ' degrees Celsius');
       box.style.setProperty('--p', 'calc(11px + (100% - 22px) * ' + ((v - cfg.min) / (cfg.max - cfg.min)).toFixed(4) + ')');
@@ -103,7 +111,7 @@
       else if (v < AMB && cfg.cool) t = 'Cooling from 25 °C: <b>' + mins((AMB - v) / cfg.cool) + '</b> at ' + cfg.cool + ' °C/min';
       eta.innerHTML = t;
     }
-    input.addEventListener('input', update);
+    input.addEventListener('input', function (e) { update(e.isTrusted); });
     update();
     /* a gentle one-time sweep when the explorer first scrolls into view, so people notice it is interactive */
     if ('IntersectionObserver' in window && !reduced()) {

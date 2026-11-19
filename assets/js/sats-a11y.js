@@ -10,7 +10,7 @@
   var $ = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
   var ZOOMS = [100, 115, 130, 150];
-  var state = { zoom: 0, contrast: false, font: false, spacing: false, links: false, cursor: false, guide: false };
+  var state = { zoom: 0, contrast: false, font: false, spacing: false, links: false, cursor: false, guide: false, sound: true, haptics: true };
 
   try { var saved = JSON.parse(localStorage.getItem(KEY) || '{}'); Object.keys(state).forEach(function (k) { if (saved[k] !== undefined) state[k] = saved[k]; }); } catch (e) {}
   function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
@@ -31,6 +31,7 @@
     setAttr('data-a11y-cursor', state.cursor, 'big');
     if (state.font) loadFont();
     guide(state.guide);
+    document.dispatchEvent(new CustomEvent('sats:fb-change', { detail: { sound: state.sound, haptics: state.haptics } }));
   }
   function loadFont() {
     if ($('#a11y-font')) return;
@@ -102,6 +103,8 @@
       sw('cursor', 'bi-cursor-fill', 'Big cursor', 'Larger mouse pointer') +
       sw('guide', 'bi-eye', 'Reading guide', 'A focus band follows your mouse') +
       sw('motion', 'bi-pause-circle', 'Pause animations', 'Stops moving effects and auto-play') +
+      sw('sound', 'bi-music-note-beamed', 'Sound effects', 'Soft sounds when you touch or the animation reaches a point') +
+      sw('haptics', 'bi-phone-vibrate', 'Vibration', 'Short buzzes on supported phones (Android)') +
       (synth ? sw('speak', 'bi-volume-up-fill', 'Read aloud', 'Reads the page, or the text you select') : '') +
       '</div><footer><button type="button" class="a11y-reset"><i class="bi bi-arrow-counterclockwise"></i> Reset all</button>' +
       '<span>Saved on this device. Press <kbd>Esc</kbd> to close.</span></footer>';
@@ -145,7 +148,7 @@
     if (!panel) return;
     var on = {
       theme: themeDark(), contrast: state.contrast, font: state.font, spacing: state.spacing, links: state.links, cursor: state.cursor,
-      guide: state.guide, motion: motionOff(), speak: speaking
+      guide: state.guide, motion: motionOff(), speak: speaking, sound: state.sound, haptics: state.haptics
     };
     Object.keys(rows).forEach(function (k) { rows[k].setAttribute('aria-checked', String(!!on[k])); });
     var v = $('#a11y-zoom-val', panel); if (v) v.textContent = ZOOMS[state.zoom] + '%';
@@ -155,7 +158,7 @@
     btn.classList.toggle('active', !!changed);
   }
   function reset() {
-    state = { zoom: 0, contrast: false, font: false, spacing: false, links: false, cursor: false, guide: false };
+    state = { zoom: 0, contrast: false, font: false, spacing: false, links: false, cursor: false, guide: false, sound: true, haptics: true };
     save(); apply(); stopSpeak();
     if (motionOff()) window.SATS.setMotion(true);
     sync(); announce('All accessibility settings reset');

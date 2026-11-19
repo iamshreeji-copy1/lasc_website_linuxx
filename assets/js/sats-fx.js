@@ -185,7 +185,7 @@
       ctx2.restore();
       if (!reduced()) {
         beam += dt * S * .21;
-        if (beam > cy + R + 20) { beam = cy - R - 20; phase++; dies.forEach(function (d) { d.tested = 0; d.fail = Math.random() < .08; }); }
+        if (beam > cy + R + 20) { beam = cy - R - 20; phase++; document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'scan' } })); dies.forEach(function (d) { d.tested = 0; d.fail = Math.random() < .08; }); }
       } else { dies.forEach(function (d) { d.tested = 1; }); }
       dies.forEach(function (d) {
         if (!reduced() && d.tested === 0 && d.y + d.h / 2 < beam) { d.tested = 1; d.flash = 1; }
@@ -212,6 +212,7 @@
     wcan.addEventListener('pointermove', function (e) {
       var r = wcan.getBoundingClientRect(), x = (e.clientX - r.left) * (S / r.width), y = (e.clientY - r.top) * (S / r.height), found = null;
       for (var i = 0; i < dies.length; i++) { var d = dies[i]; if (x >= d.x && x <= d.x + d.w && y >= d.y && y <= d.y + d.h) { found = d; break; } }
+      if (found && found !== hoverDie && found.tested) document.dispatchEvent(new CustomEvent('sats:fx', { detail: { type: 'die', fail: found.fail } }));
       hoverDie = found;
       if (label) label.textContent = found ? 'Die (' + found.c + ', ' + found.r + ') · ' + (found.tested ? (found.fail ? 'FAIL' : 'PASS') : 'queued') : 'Live wafer map · hover to probe a die';
       if (!reduced() && finePointer) { wrap.style.setProperty('--wy', ((x / S - .5) * 10).toFixed(2) + 'deg'); wrap.style.setProperty('--wx', ((.5 - y / S) * 10).toFixed(2) + 'deg'); }

@@ -243,6 +243,7 @@ def scripts(index=False, product=False):
   <script src="assets/js/main.js"></script>
   <script src="assets/js/sats-fx.js"></script>
   <script src="assets/js/sats-app.js"></script>
+  <script src="assets/js/sats-feel.js"></script>
   <script src="assets/js/sats-a11y.js"></script>{prod_js}{li_js}
 </body>
 </html>
