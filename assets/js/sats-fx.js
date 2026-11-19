@@ -19,24 +19,18 @@
     try { localStorage.setItem('sats-motion', on ? 'on' : 'off'); } catch (e) {}
   };
 
-  /* ------------------------------------------------------------ theme toggle */
-  var toggle = $('#theme-toggle');
+  /* ------------------------------------------------------------ theme (switched from the accessibility panel) */
   function applyTheme(t) {
     root.setAttribute('data-theme', t); root.setAttribute('data-bs-theme', t);
     var meta = $('meta[name="theme-color"]'); if (meta) meta.setAttribute('content', t === 'dark' ? '#03312b' : '#008374');
-    if (toggle) {
-      toggle.setAttribute('aria-pressed', String(t === 'dark'));
-      toggle.setAttribute('aria-label', t === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-    }
   }
-  if (toggle) {
-    applyTheme(root.getAttribute('data-theme') || 'light');
-    toggle.addEventListener('click', function () {
-      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      applyTheme(next);
-      try { localStorage.setItem('sats-theme', next); } catch (e) {}
-    });
-  }
+  applyTheme(root.getAttribute('data-theme') || 'dark');
+  window.SATS.toggleTheme = function () {
+    var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('sats-theme', next); } catch (e) {}
+    return next;
+  };
 
   /* --------------------------------------------------- word-reveal headings */
   function splitWords(el) {

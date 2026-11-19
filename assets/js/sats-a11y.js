@@ -133,7 +133,7 @@
     if (e.target.closest('.a11y-reset')) { reset(); return; }
     var s = e.target.closest('.a11y-sw'); if (!s) return;
     var k = s.getAttribute('data-k');
-    if (k === 'theme') { var t = $('#theme-toggle'); if (t) t.click(); }
+    if (k === 'theme') { if (window.SATS && window.SATS.toggleTheme) window.SATS.toggleTheme(); }
     else if (k === 'motion') { window.SATS.setMotion(motionOff()); }
     else if (k === 'speak') { speaking ? stopSpeak() : speak(); sync(); return; }
     else { state[k] = !state[k]; save(); apply(); }
