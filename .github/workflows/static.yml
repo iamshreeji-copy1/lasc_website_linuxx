@@ -31,6 +31,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Remove files that must not be published
+        run: rm -rf _archive _tools forms SATS_REVIEW_REPORT.md
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

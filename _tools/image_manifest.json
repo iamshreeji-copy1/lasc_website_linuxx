@@ -1,0 +1,442 @@
+{
+ "assets/img/sats_products/probe_station/SATs Probe Station.jpg|lg": [
+  "assets/img/web/low-temp-probe-station-1-lg.webp",
+  1400,
+  945
+ ],
+ "assets/img/sats_products/probe_station/SATs Probe Station.jpg|md": [
+  "assets/img/web/low-temp-probe-station-1-md.webp",
+  800,
+  540
+ ],
+ "assets/img/sats_products/probe_station/IMG_20240510_163524.jpg|lg": [
+  "assets/img/web/low-temp-probe-station-2-lg.webp",
+  1400,
+  1172
+ ],
+ "assets/img/sats_products/probe_station/IMG_20240510_163524.jpg|md": [
+  "assets/img/web/low-temp-probe-station-2-md.webp",
+  800,
+  670
+ ],
+ "assets/img/sats_products/probe_station/Minimalist Black and White Blank Paper Document (1).jpg|lg": [
+  "assets/img/web/low-temp-probe-station-3-lg.webp",
+  1400,
+  1174
+ ],
+ "assets/img/sats_products/probe_station/Minimalist Black and White Blank Paper Document (1).jpg|md": [
+  "assets/img/web/low-temp-probe-station-3-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder1.jpg|lg": [
+  "assets/img/web/sample-holder-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder1.jpg|md": [
+  "assets/img/web/sample-holder-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder2.jpg|lg": [
+  "assets/img/web/sample-holder-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder2.jpg|md": [
+  "assets/img/web/sample-holder-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder3.jpg|lg": [
+  "assets/img/web/sample-holder-3-lg.webp",
+  1280,
+  1073
+ ],
+ "assets/img/sats_products/sample_holder/Sample-Holder3.jpg|md": [
+  "assets/img/web/sample-holder-3-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/pec_setup/PEC-Setup1.jpg|lg": [
+  "assets/img/web/pec-setup-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/pec_setup/PEC-Setup1.jpg|md": [
+  "assets/img/web/pec-setup-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/light_source/Light-sorce1.jpg|lg": [
+  "assets/img/web/light-source-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/light_source/Light-sorce1.jpg|md": [
+  "assets/img/web/light-source-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/light_source/Light-sorce2.jpg|lg": [
+  "assets/img/web/light-source-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/light_source/Light-sorce2.jpg|md": [
+  "assets/img/web/light-source-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/hydro_thermal/Hydrothermal1.jpg|lg": [
+  "assets/img/web/hydrothermal-autoclave-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/hydro_thermal/Hydrothermal1.jpg|md": [
+  "assets/img/web/hydrothermal-autoclave-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/hydro_thermal/Hydrothermal2.jpg|lg": [
+  "assets/img/web/hydrothermal-autoclave-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/hydro_thermal/Hydrothermal2.jpg|md": [
+  "assets/img/web/hydrothermal-autoclave-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/bettery_tester/Bettery-tester1.jpg|lg": [
+  "assets/img/web/battery-tester-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/bettery_tester/Bettery-tester1.jpg|md": [
+  "assets/img/web/battery-tester-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/bettery_tester/Bettery-tester2.jpg|lg": [
+  "assets/img/web/battery-tester-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/bettery_tester/Bettery-tester2.jpg|md": [
+  "assets/img/web/battery-tester-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/chiller/Chiller1.png|lg": [
+  "assets/img/web/water-chiller-1-lg.webp",
+  1280,
+  960
+ ],
+ "assets/img/sats_products/chiller/Chiller1.png|md": [
+  "assets/img/web/water-chiller-1-md.webp",
+  800,
+  600
+ ],
+ "assets/img/sats_products/extranal_prob_crayo_1.png|lg": [
+  "assets/img/web/externally-controlled-cryo-probe-station-1-lg.webp",
+  573,
+  408
+ ],
+ "assets/img/sats_products/extranal_prob_crayo_1.png|md": [
+  "assets/img/web/externally-controlled-cryo-probe-station-1-md.webp",
+  573,
+  408
+ ],
+ "assets/img/sats_products/extranal_prob_crayo_2.jpg|lg": [
+  "assets/img/web/externally-controlled-cryo-probe-station-2-lg.webp",
+  790,
+  364
+ ],
+ "assets/img/sats_products/extranal_prob_crayo_2.jpg|md": [
+  "assets/img/web/externally-controlled-cryo-probe-station-2-md.webp",
+  790,
+  364
+ ],
+ "assets/img/sats_products/crayo_1.jpg|lg": [
+  "assets/img/web/cryogenic-probe-station-1-lg.webp",
+  1400,
+  883
+ ],
+ "assets/img/sats_products/crayo_1.jpg|md": [
+  "assets/img/web/cryogenic-probe-station-1-md.webp",
+  800,
+  505
+ ],
+ "assets/img/sats_products/crayo_2.jpeg|lg": [
+  "assets/img/web/cryogenic-probe-station-2-lg.webp",
+  800,
+  1131
+ ],
+ "assets/img/sats_products/crayo_2.jpeg|md": [
+  "assets/img/web/cryogenic-probe-station-2-md.webp",
+  800,
+  1131
+ ],
+ "assets/img/sats_products/crayo_3.png|lg": [
+  "assets/img/web/cryogenic-probe-station-3-lg.webp",
+  1400,
+  993
+ ],
+ "assets/img/sats_products/crayo_3.png|md": [
+  "assets/img/web/cryogenic-probe-station-3-md.webp",
+  800,
+  568
+ ],
+ "assets/img/sats_products/SATs Potentiostate.png|lg": [
+  "assets/img/web/potentiostat-1-lg.webp",
+  1024,
+  1536
+ ],
+ "assets/img/sats_products/SATs Potentiostate.png|md": [
+  "assets/img/web/potentiostat-1-md.webp",
+  800,
+  1200
+ ],
+ "assets/img/sats_products/Furnace_1.png|lg": [
+  "assets/img/web/muffle-furnace-1-lg.webp",
+  1024,
+  1536
+ ],
+ "assets/img/sats_products/Furnace_1.png|md": [
+  "assets/img/web/muffle-furnace-1-md.webp",
+  800,
+  1200
+ ],
+ "assets/img/sats_products/VbTable.png|lg": [
+  "assets/img/web/vibration-less-table-1-lg.webp",
+  372,
+  368
+ ],
+ "assets/img/sats_products/VbTable.png|md": [
+  "assets/img/web/vibration-less-table-1-md.webp",
+  372,
+  368
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution1.jpg|lg": [
+  "assets/img/web/lab-equipment-custom-solutions-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution1.jpg|md": [
+  "assets/img/web/lab-equipment-custom-solutions-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution2.jpg|lg": [
+  "assets/img/web/lab-equipment-custom-solutions-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution2.jpg|md": [
+  "assets/img/web/lab-equipment-custom-solutions-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution3.jpg|lg": [
+  "assets/img/web/lab-equipment-custom-solutions-3-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution3.jpg|md": [
+  "assets/img/web/lab-equipment-custom-solutions-3-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution4.jpg|lg": [
+  "assets/img/web/lab-equipment-custom-solutions-4-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/custom_solutions_and_lab_equiment_supplier/Custom-solution4.jpg|md": [
+  "assets/img/web/lab-equipment-custom-solutions-4-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design1.jpg|lg": [
+  "assets/img/web/web-design-development-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design1.jpg|md": [
+  "assets/img/web/web-design-development-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design2.jpg|lg": [
+  "assets/img/web/web-design-development-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design2.jpg|md": [
+  "assets/img/web/web-design-development-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design3.jpg|lg": [
+  "assets/img/web/web-design-development-3-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/web_design_and_development/Web-design3.jpg|md": [
+  "assets/img/web/web-design-development-3-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML1.jpg|lg": [
+  "assets/img/web/ai-ml-course-1-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML1.jpg|md": [
+  "assets/img/web/ai-ml-course-1-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML2.jpg|lg": [
+  "assets/img/web/ai-ml-course-2-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML2.jpg|md": [
+  "assets/img/web/ai-ml-course-2-md.webp",
+  800,
+  671
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML3.jpg|lg": [
+  "assets/img/web/ai-ml-course-3-lg.webp",
+  1293,
+  1084
+ ],
+ "assets/img/sats_products/ai_ml_course/AIML3.jpg|md": [
+  "assets/img/web/ai-ml-course-3-md.webp",
+  800,
+  671
+ ],
+ "client|iitd.png": [
+  "assets/img/web/clients/iitd.webp",
+  320,
+  320
+ ],
+ "client|University_of_Hyderabad_Logo.png": [
+  "assets/img/web/clients/University_of_Hyderabad_Logo.webp",
+  300,
+  302
+ ],
+ "client|IISER-K_Logo.png": [
+  "assets/img/web/clients/IISER-K_Logo.webp",
+  320,
+  336
+ ],
+ "client|iitk.png": [
+  "assets/img/web/clients/iitk.webp",
+  230,
+  219
+ ],
+ "client|iitgn.png": [
+  "assets/img/web/clients/iitgn.webp",
+  189,
+  267
+ ],
+ "client|iitmandi.png": [
+  "assets/img/web/clients/iitmandi.webp",
+  320,
+  209
+ ],
+ "client|iit_dhanbad.png": [
+  "assets/img/web/clients/iit_dhanbad.webp",
+  210,
+  240
+ ],
+ "client|iiser_tirupati.png": [
+  "assets/img/web/clients/iiser_tirupati.webp",
+  212,
+  183
+ ],
+ "client|CUG.png": [
+  "assets/img/web/clients/CUG.webp",
+  237,
+  213
+ ],
+ "client|cuh_hariyana.png": [
+  "assets/img/web/clients/cuh_hariyana.webp",
+  210,
+  240
+ ],
+ "client|purvanchal_university.png": [
+  "assets/img/web/clients/purvanchal_university.webp",
+  320,
+  320
+ ],
+ "client|shiv_nadar.jpg": [
+  "assets/img/web/clients/shiv_nadar.webp",
+  320,
+  320
+ ],
+ "client|manipal.jpeg": [
+  "assets/img/web/clients/manipal.webp",
+  225,
+  225
+ ],
+ "client|nitte.png": [
+  "assets/img/web/clients/nitte.webp",
+  320,
+  104
+ ],
+ "client|PDEU.png": [
+  "assets/img/web/clients/PDEU.webp",
+  250,
+  265
+ ],
+ "client|csir_hyderabad.png": [
+  "assets/img/web/clients/csir_hyderabad.webp",
+  249,
+  203
+ ],
+ "client|adani_solar.jpg": [
+  "assets/img/web/clients/adani_solar.webp",
+  320,
+  320
+ ],
+ "client|dhruva_space.png": [
+  "assets/img/web/clients/dhruva_space.webp",
+  320,
+  107
+ ],
+ "client|bits_goaa.jpg": [
+  "assets/img/web/clients/bits_goaa.webp",
+  290,
+  96
+ ],
+ "client|bits_hyderabad.png": [
+  "assets/img/web/clients/bits_hyderabad.webp",
+  320,
+  99
+ ],
+ "client|au_logo.png": [
+  "assets/img/web/clients/au_logo.webp",
+  320,
+  139
+ ],
+ "testimonial|charu-dubey_800_800.png": [
+  "assets/img/web/testimonials/charu-dubey_800_800.webp",
+  160,
+  160
+ ],
+ "testimonial|om_modi.png": [
+  "assets/img/web/testimonials/om_modi.webp",
+  160,
+  160
+ ],
+ "testimonial|paawnkumar.jpg": [
+  "assets/img/web/testimonials/paawnkumar.webp",
+  160,
+  144
+ ]
+}
