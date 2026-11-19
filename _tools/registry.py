@@ -19,7 +19,7 @@ SITE = {
         ("linkedin", "LinkedIn", "https://www.linkedin.com/in/semiconductor-analysis-and-testing-solutions-sats-8a4a29307/"),
         ("youtube", "YouTube", "https://www.youtube.com/@Semiconductortestingsolutions"),
     ],
-    "credit_url": "https://iamshreeji-copy1.github.io/ravindrakumar_purohit/index.html",
+    "credit_url": "https://ravindrakumarpurohit.xyz/",
     "gtag": "G-TMP95ECSDY",
     "gtm": "GTM-TQ2FD6NJ",
 }
